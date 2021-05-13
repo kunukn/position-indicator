@@ -25,8 +25,17 @@ new Vue({
     round(number) {
       return Math.round((number + Number.EPSILON) * 100) / 100
     },
-    onPositionUpdate({ position, updateType, hasScroll, lastUpdated }) {
+    onPositionUpdate({
+      position,
+      prevPosition,
+      updateType,
+      hasScroll,
+      lastUpdated,
+      hasUpdated,
+    }) {
       this.position = position
+      this.prevPosition = prevPosition
+      this.hasUpdated = hasUpdated
       this.updateType = updateType
       this.hasScroll = hasScroll
       this.lastUpdated = lastUpdated
