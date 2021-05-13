@@ -8,8 +8,7 @@
 
 ## About
 
-Minimal code to know the scroll position.
-
+Minimal code to know the scroll position of the page.
 
 ## Demo
 
@@ -17,26 +16,26 @@ Minimal code to know the scroll position.
 
 <tr>
 <td>Codepen VanillaJS</td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">View</a></td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">Edit</a></td>
+<td><a href="#" target="_blank" rel="noopener noreferrer">TODO View</a></td>
+<td><a href="#" target="_blank" rel="noopener noreferrer">TODO Edit</a></td>
 </tr>
 
 <tr>
 <td>Codesandbox VanillaJS</td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">View</a></td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">Edit</a></td>
+<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
+<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
 </tr>
 
 <tr>
 <td>Codesandbox ReactJS</td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">View</a></td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">Edit</a></td>
+<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
+<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
 </tr>
 
 <tr>
 <td>Codesandbox VueJS</td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">View</a></td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">Edit</a></td>
+<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
+<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
 </tr>
 
 </table>
@@ -55,12 +54,30 @@ npm install position-indicator --save
 ### Usage
 
 ```js
-import {
-  todo,
-} from 'position-indicator';
+import { createPositionIndicator } from 'position-indicator'
 
-// Todo
-todo();
+let myOnInitCallback = (data) => {}
+let myOnUpdateCallback = (data) => {}
+
+// where data is:
+let data = {
+  position /* value between 0 and 1 */,
+  prevPosition /* value between 0 and 1 */,
+  hasUpdated /* if position is different from last event */,
+  updateType /* scroll, resize, heightChange or init */,
+  hasScroll /* true or false */,
+  lastUpdated /* Date.now() */,
+}
+
+let positionIndicator = createPositionIndicator({
+  onInit: myOnInitCallback,
+  onUpdate: myOnUpdateCallback,
+})
+
+positionIndicator.init()
+
+// Then later when not used anymore
+positionIndicator.destroy()
 ```
 
 ### Installation from CDN
@@ -76,7 +93,7 @@ This module has an UMD bundle available through JSDelivr and Unpkg CDNs.
 
 <script>
   // UMD module is exposed through the "positionIndicator" global variable.
-  console.log(positionIndicator);
+  console.log(positionIndicator)
 </script>
 ```
 
