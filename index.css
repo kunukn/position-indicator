@@ -7,62 +7,64 @@ html {
   font-size: 16px;
 }
 body {
-  padding: 1rem;
+  min-height: 100vh;
 }
 
 #app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: lightyellow;
-  }
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: lightyellow;
+}
 
-  .device {
-    min-height: 101vh;
-  }
-  .info {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    background: white;
-    border: 1px solid;
-    padding: 1rem;
-  }
-  p {
-    line-height: 1.5;
-  }
-  
-  .lorem {
-    padding-top: 4rem;
-    line-height: 20;
-    max-width: 900px;
-  }
-  
-  .toggle {
-    border: 1px solid;
-    padding: 1rem;
-    width: 100%;
-  }
-  
-  .box {
-    min-height: 300px;
-    background: pink;
-  }
-  
-  .indicator {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 8px;
-  }
-  .indicator-width {
-    background: dodgerblue;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 8px;
-    width: 100%;
-    transform-origin: 0 0;
-    will-change: transform;
-  }
+.device {
+  color: #333;
+}
+.info {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: white;
+  border: 1px solid;
+  padding: 1rem;
+}
+p {
+  line-height: 1.5;
+}
+
+.lorem {
+  padding: 1rem;
+  line-height: 20;
+  max-width: 900px;
+  background: orange;
+  min-height: 99vh;
+}
+
+.toggle {
+  border: 1px solid;
+  padding: 1rem;
+  width: 100%;
+}
+
+.box {
+  min-height: 300px;
+  background: pink;
+}
+
+.indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8px;
+}
+.indicator-width {
+  background: dodgerblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  transform-origin: 0 0;
+  will-change: transform;
+}
