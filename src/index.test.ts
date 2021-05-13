@@ -1,7 +1,7 @@
-import { todo } from './'
+import { createPositionIndicator } from './'
 
 describe('positionIndicator', () => {
-  test('todo is a function', () => {
-    expect(typeof todo).toBe('function')
+  test('createPositionIndicator is a function', () => {
+    expect(typeof createPositionIndicator).toBe('function')
   })
 })
