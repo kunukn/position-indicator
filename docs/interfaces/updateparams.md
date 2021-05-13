@@ -11,7 +11,7 @@
 - [lastUpdated](updateparams.md#lastupdated)
 - [position](updateparams.md#position)
 - [prevPosition](updateparams.md#prevposition)
-- [updateType](updateparams.md#updatetype)
+- [updateEvent](updateparams.md#updateevent)
 
 ## Properties
 
@@ -19,7 +19,7 @@
 
 • **hasScroll**: *boolean*
 
-Defined in: [index.ts:12](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L12)
+Defined in: [index.ts:12](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L12)
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **hasUpdated**: *boolean*
 
-Defined in: [index.ts:10](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L10)
+Defined in: [index.ts:10](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L10)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **lastUpdated**: *number*
 
-Defined in: [index.ts:13](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L13)
+Defined in: [index.ts:13](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L13)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **position**: *number*
 
-Defined in: [index.ts:8](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L8)
+Defined in: [index.ts:8](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L8)
 
 ___
 
@@ -51,12 +51,12 @@ ___
 
 • **prevPosition**: *number*
 
-Defined in: [index.ts:9](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L9)
+Defined in: [index.ts:9](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L9)
 
 ___
 
-### updateType
+### updateEvent
 
-• **updateType**: [*updateType*](../README.md#updatetype)
+• **updateEvent**: [*updateEvent*](../README.md#updateevent)
 
-Defined in: [index.ts:11](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L11)
+Defined in: [index.ts:11](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L11)

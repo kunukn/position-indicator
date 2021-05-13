@@ -1,12 +1,12 @@
-export declare type updateType = 'init' | 'scroll' | 'resize' | 'heightChange';
+export declare type updateEvent = 'init' | 'scroll' | 'resize' | 'heightChange';
 export interface Memory {
-    prevPosition: number | null;
+    prevPosition?: number | null;
 }
 export interface UpdateParams {
     position: number;
     prevPosition: number;
     hasUpdated: boolean;
-    updateType: updateType;
+    updateEvent: updateEvent;
     hasScroll: boolean;
     lastUpdated: number;
 }

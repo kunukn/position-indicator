@@ -17,7 +17,7 @@ var _hasScroll = function () { return _getFullDocumentHeight() > _getViewPortHei
 var _clamp = function (value, min, max) {
     return Math.min(Math.max(value, min), max);
 };
-var _onUpdate = function (updateType, memory) {
+var _onUpdate = function (updateEvent, memory) {
     var fullDocumentHeight = _getFullDocumentHeight();
     var viewPortHeight = _getViewPortHeight();
     var scrollYPosition = _getScrollYPosition();
@@ -29,7 +29,7 @@ var _onUpdate = function (updateType, memory) {
         position: position,
         prevPosition: prevPosition,
         hasUpdated: position !== prevPosition,
-        updateType: updateType,
+        updateEvent: updateEvent,
         hasScroll: _hasScroll(),
         lastUpdated: Date.now(),
     };
@@ -51,6 +51,10 @@ var _init = function (_a, events, memory) {
             updateCallback(_onUpdate('heightChange', memory));
         }
     };
+    if (typeof ResizeObserver !== 'undefined') {
+        events.resizeObserver = new ResizeObserver(events.onHeightChange);
+        events.resizeObserver.observe(document.body);
+    }
     /**
      * Throttling for event is not used.
      * Because it has the same effect same as rAF.
@@ -58,10 +62,6 @@ var _init = function (_a, events, memory) {
      */
     window.addEventListener('scroll', events.onScroll);
     window.addEventListener('resize', events.onResize);
-    if (typeof ResizeObserver !== 'undefined') {
-        events.resizeObserver = new ResizeObserver(events.onHeightChange);
-        events.resizeObserver.observe(document.body);
-    }
     initCallback && initCallback(_onUpdate('init', memory));
 };
 var _destroy = function (events) {
@@ -76,17 +76,13 @@ var createPositionIndicator = function (options) {
         onHeightChange: null,
         resizeObserver: null,
     };
-    var memory = {
-        prevPosition: null,
-    };
+    var memory = {};
     return {
         init: function () { return _init(options, events, memory); },
         destroy: function () {
             _destroy(events);
             events = {};
-            memory = {
-                prevPosition: null,
-            };
+            memory = {};
         },
     };
 };

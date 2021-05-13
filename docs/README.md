@@ -13,7 +13,7 @@ positionIndicator
 
 ### Type aliases
 
-- [updateType](README.md#updatetype)
+- [updateEvent](README.md#updateevent)
 
 ### Functions
 
@@ -21,11 +21,11 @@ positionIndicator
 
 ## Type aliases
 
-### updateType
+### updateEvent
 
-Ƭ **updateType**: ``"init"`` \| ``"scroll"`` \| ``"resize"`` \| ``"heightChange"``
+Ƭ **updateEvent**: ``"init"`` \| ``"scroll"`` \| ``"resize"`` \| ``"heightChange"``
 
-Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L1)
+Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L1)
 
 ## Functions
 
@@ -41,4 +41,4 @@ Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/8f6a8
 
 **Returns:** [*PositionIndicatorInstance*](interfaces/positionindicatorinstance.md)
 
-Defined in: [index.ts:107](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L107)
+Defined in: [index.ts:106](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L106)

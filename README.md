@@ -65,7 +65,7 @@ let data = {
   position /* value between 0 and 1 */,
   prevPosition /* value between 0 and 1 */,
   hasUpdated /* if position is different from last event */,
-  updateType /* scroll, resize, heightChange or init */,
+  updateEvent /* scroll, resize, heightChange or init */,
   hasScroll /* true or false */,
   lastUpdated /* Date.now() */,
 }

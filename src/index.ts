@@ -1,4 +1,4 @@
-export type updateType = 'init' | 'scroll' | 'resize' | 'heightChange'
+export type updateEvent = 'init' | 'scroll' | 'resize' | 'heightChange'
 
 export interface Memory {
   prevPosition?: number | null
@@ -8,7 +8,7 @@ export interface UpdateParams {
   position: number
   prevPosition: number
   hasUpdated: boolean
-  updateType: updateType
+  updateEvent: updateEvent
   hasScroll: boolean
   lastUpdated: number
 }
@@ -42,7 +42,7 @@ let _hasScroll = () => _getFullDocumentHeight() > _getViewPortHeight()
 let _clamp = (value: number, min: number, max: number) =>
   Math.min(Math.max(value, min), max)
 
-let _onUpdate = (updateType: updateType, memory: Memory): UpdateParams => {
+let _onUpdate = (updateEvent: updateEvent, memory: Memory): UpdateParams => {
   let fullDocumentHeight = _getFullDocumentHeight()
   let viewPortHeight = _getViewPortHeight()
   let scrollYPosition = _getScrollYPosition()
@@ -55,7 +55,7 @@ let _onUpdate = (updateType: updateType, memory: Memory): UpdateParams => {
     position,
     prevPosition,
     hasUpdated: position !== prevPosition,
-    updateType,
+    updateEvent,
     hasScroll: _hasScroll(),
     lastUpdated: Date.now(),
   }

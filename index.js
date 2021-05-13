@@ -11,7 +11,7 @@ new Vue({
       scrollYPosition: null,
       hasScroll: null,
       lastUpdated: null,
-      updateType: null,
+      updateEvent: null,
       isOpen: true,
       position: 0,
     }
@@ -28,7 +28,7 @@ new Vue({
     onPositionUpdate({
       position,
       prevPosition,
-      updateType,
+      updateEvent,
       hasScroll,
       lastUpdated,
       hasUpdated,
@@ -36,7 +36,7 @@ new Vue({
       this.position = position
       this.prevPosition = prevPosition
       this.hasUpdated = hasUpdated
-      this.updateType = updateType
+      this.updateEvent = updateEvent
       this.hasScroll = hasScroll
       this.lastUpdated = lastUpdated
     },
