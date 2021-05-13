@@ -8,6 +8,7 @@
 
 - [onInit](options.md#oninit)
 - [onUpdate](options.md#onupdate)
+- [resizeObserverDisabled](options.md#resizeobserverdisabled)
 
 ## Properties
 
@@ -27,7 +28,7 @@
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L22)
+Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L22)
 
 ___
 
@@ -47,4 +48,12 @@ ___
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/59baa22/src/index.ts#L23)
+Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L23)
+
+___
+
+### resizeObserverDisabled
+
+• **resizeObserverDisabled**: *boolean*
+
+Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L24)
