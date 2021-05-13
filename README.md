@@ -8,6 +8,7 @@
 
 ## About
 
+A position indicator that updates on scroll, resize and body height change.<br/>
 Minimal code to know the scroll position of the page.
 
 ## Demo

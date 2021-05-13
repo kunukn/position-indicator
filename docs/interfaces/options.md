@@ -27,7 +27,7 @@
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/7a69f9e/src/index.ts#L22)
+Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L22)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/7a69f9e/src/index.ts#L23)
+Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/8f6a877/src/index.ts#L23)
