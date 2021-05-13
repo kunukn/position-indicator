@@ -6,28 +6,95 @@
     <title>Demo</title>
 
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="/dist/index.css" />
+    <link rel="stylesheet" href="/index.css" />
 
-    <style>
-      /* Demo */
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        font-size: 16px;
-      }
-      body {
-        font-family: Calibri, 'Trebuchet MS', sans-serif;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
-    <div class="app">
-      todo
+    <script type="application/javascript">
+      const getFullDocumentHeight = () => {
+        return Math.max(
+          document.body.scrollHeight,
+          document.documentElement.scrollHeight
+        )
+      }
+
+      const getViewPortHeight = () => window.innerHeight || 0
+
+      const getFixedViewPortHeight = () =>
+        document.documentElement.clientHeight || 0
+
+      const getFixedScrollHeight = () =>
+        getFullDocumentHeight() - getFixedViewPortHeight()
+
+      const getScrollYPosition = () =>
+        window.pageYOffset || document.documentElement.scrollTop || 0
+
+      const clamp = (value, min, max) => Math.min(Math.max(value, min), max)
+
+      // Map value x in range [a,b] to [c,d]
+      const rangeMap = (x, a, b, c, d) => {
+        if (a === b) return c
+        if (c === d) return c
+        return ((x - a) / (b - a)) * (d - c) + c
+      }
+    </script>
+    <script
+      type="application/javascript"
+      src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"
+    ></script>
+    <script type="application/javascript" src="/dist/index.umd.min.js"></script>
+
+    <div class="app" id="app">
+      <div class="device">
+        <div class="info">
+          <h3>Device Scroll Position and Height</h3>
+          <button class="toggle" @click="isOpen = !isOpen">
+            Toggle {{ isOpen }}
+          </button>
+
+          <p>lastUpdated: {{ lastUpdated }}</p>
+          <p>position: {{ position }}</p>
+          <p>innerHeight: {{ innerHeight }}</p>
+          <p>outerHeight: {{ outerHeight }}</p>
+          <p>innerWidth: {{ innerWidth }}</p>
+          <br />
+          <p>updateType: {{ updateType }}</p>
+          <br />
+          <p>fullDocumentHeight: {{ fullDocumentHeight }}</p>
+          <p>viewPortHeight: {{ viewPortHeight }}</p>
+          <p>fixedViewPortHeight: {{ fixedViewPortHeight }}</p>
+          <p>fixedScrollHeight: {{ fixedScrollHeight }}</p>
+          <p>scrollYPosition: {{ round(scrollYPosition) }}</p>
+          <p>
+            scrollY + viewPortHeight: {{ round(scrollYPosition + viewPortHeight)
+            }}
+          </p>
+        </div>
+
+        <p class="lorem">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+
+        <div v-if="isOpen" class="box">Collapse box</div>
+
+        <div class="indicator">
+          <div
+            class="indicator-width"
+            :style="{ transform: calculatedLineWidth }"
+          ></div>
+        </div>
+      </div>
     </div>
 
-    <script src="/dist/index.umd.min.js"></script>
-    <script>
-    </script>
+    <script type="application/javascript" src="/index.js"></script>
   </body>
 </html>

@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "target": "ES2018",
+    
     // React.js JSX settings.
     "jsx": "react",
     "jsxFactory": "React.createElement",
@@ -13,7 +15,7 @@
     "resolveJsonModule": true,
 
     // Strictness and quality settings.
-    "alwaysStrict": true,
+    "alwaysStrict": false,
     "forceConsistentCasingInFileNames": true,
     "importsNotUsedAsValues": "error",
     "noFallthroughCasesInSwitch": true,
@@ -22,7 +24,7 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true,
+    "strict": false,
 
     // Custom
     "allowJs": true,
