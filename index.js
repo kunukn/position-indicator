@@ -49,6 +49,7 @@ new Vue({
       window.positionIndicator.createPositionIndicator({
         onInit,
         onUpdate,
+        resizeObserverDisabled: false,
       })
     )
 

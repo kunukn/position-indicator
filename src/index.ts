@@ -21,6 +21,7 @@ export interface PositionIndicatorInstance {
 export interface Options {
   onInit: (data: UpdateParams) => {} | void
   onUpdate: (data: UpdateParams) => {} | void
+  resizeObserverDisabled: boolean
 }
 
 interface Events {
@@ -62,7 +63,11 @@ let _onUpdate = (updateEvent: updateEvent, memory: Memory): UpdateParams => {
 }
 
 let _init = (
-  { onInit: initCallback, onUpdate: updateCallback }: Options,
+  {
+    onInit: initCallback,
+    onUpdate: updateCallback,
+    resizeObserverDisabled,
+  }: Options,
   events: Events,
   memory: Memory
 ) => {
@@ -76,16 +81,20 @@ let _init = (
       updateCallback(_onUpdate('resize', memory))
     }
   }
-  events.onHeightChange = () => {
-    if (updateCallback) {
-      updateCallback(_onUpdate('heightChange', memory))
+
+  if (!resizeObserverDisabled) {
+    events.onHeightChange = () => {
+      if (updateCallback) {
+        updateCallback(_onUpdate('heightChange', memory))
+      }
+    }
+
+    if (typeof ResizeObserver !== 'undefined') {
+      events.resizeObserver = new ResizeObserver(events.onHeightChange)
+      events.resizeObserver.observe(document.body)
     }
   }
 
-  if (typeof ResizeObserver !== 'undefined') {
-    events.resizeObserver = new ResizeObserver(events.onHeightChange)
-    events.resizeObserver.observe(document.body)
-  }
   /**
    * Throttling for event is not used.
    * Because it has the same effect same as rAF.

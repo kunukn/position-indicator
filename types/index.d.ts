@@ -17,6 +17,7 @@ export interface PositionIndicatorInstance {
 export interface Options {
     onInit: (data: UpdateParams) => {} | void;
     onUpdate: (data: UpdateParams) => {} | void;
+    resizeObserverDisabled: boolean;
 }
 export declare const createPositionIndicator: (options: Options) => PositionIndicatorInstance;
 //# sourceMappingURL=index.d.ts.map

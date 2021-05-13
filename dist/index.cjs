@@ -1,5 +1,5 @@
 /*!
- * position-indicator v0.0.2
+ * position-indicator v0.0.3
  * (c) kunukn
  * Released under the MIT License.
  */
@@ -35,7 +35,7 @@ var _onUpdate = function (updateEvent, memory) {
     };
 };
 var _init = function (_a, events, memory) {
-    var initCallback = _a.onInit, updateCallback = _a.onUpdate;
+    var initCallback = _a.onInit, updateCallback = _a.onUpdate, resizeObserverDisabled = _a.resizeObserverDisabled;
     events.onScroll = function () {
         if (updateCallback) {
             updateCallback(_onUpdate('scroll', memory));
@@ -46,14 +46,16 @@ var _init = function (_a, events, memory) {
             updateCallback(_onUpdate('resize', memory));
         }
     };
-    events.onHeightChange = function () {
-        if (updateCallback) {
-            updateCallback(_onUpdate('heightChange', memory));
+    if (!resizeObserverDisabled) {
+        events.onHeightChange = function () {
+            if (updateCallback) {
+                updateCallback(_onUpdate('heightChange', memory));
+            }
+        };
+        if (typeof ResizeObserver !== 'undefined') {
+            events.resizeObserver = new ResizeObserver(events.onHeightChange);
+            events.resizeObserver.observe(document.body);
         }
-    };
-    if (typeof ResizeObserver !== 'undefined') {
-        events.resizeObserver = new ResizeObserver(events.onHeightChange);
-        events.resizeObserver.observe(document.body);
     }
     /**
      * Throttling for event is not used.
