@@ -1,7 +1,7 @@
 export type updateType = 'init' | 'scroll' | 'resize' | 'heightChange'
 
 export interface Memory {
-  prevPosition: number | null
+  prevPosition?: number | null
 }
 
 export interface UpdateParams {
@@ -82,6 +82,10 @@ let _init = (
     }
   }
 
+  if (typeof ResizeObserver !== 'undefined') {
+    events.resizeObserver = new ResizeObserver(events.onHeightChange)
+    events.resizeObserver.observe(document.body)
+  }
   /**
    * Throttling for event is not used.
    * Because it has the same effect same as rAF.
@@ -89,11 +93,6 @@ let _init = (
    */
   window.addEventListener('scroll', events.onScroll)
   window.addEventListener('resize', events.onResize)
-
-  if (typeof ResizeObserver !== 'undefined') {
-    events.resizeObserver = new ResizeObserver(events.onHeightChange)
-    events.resizeObserver.observe(document.body)
-  }
 
   initCallback && initCallback(_onUpdate('init', memory))
 }
@@ -113,18 +112,14 @@ export const createPositionIndicator = (
     onHeightChange: null,
     resizeObserver: null,
   }
-  let memory: Memory = {
-    prevPosition: null,
-  }
+  let memory: Memory = {}
 
   return {
     init: () => _init(options, events, memory),
     destroy: () => {
       _destroy(events)
       events = {}
-      memory = {
-        prevPosition: null,
-      }
+      memory = {}
     },
   }
 }
