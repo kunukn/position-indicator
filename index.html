@@ -11,34 +11,6 @@
     <style></style>
   </head>
   <body>
-    <script type="application/javascript">
-      const getFullDocumentHeight = () => {
-        return Math.max(
-          document.body.scrollHeight,
-          document.documentElement.scrollHeight
-        )
-      }
-
-      const getViewPortHeight = () => window.innerHeight || 0
-
-      const getFixedViewPortHeight = () =>
-        document.documentElement.clientHeight || 0
-
-      const getFixedScrollHeight = () =>
-        getFullDocumentHeight() - getFixedViewPortHeight()
-
-      const getScrollYPosition = () =>
-        window.pageYOffset || document.documentElement.scrollTop || 0
-
-      const clamp = (value, min, max) => Math.min(Math.max(value, min), max)
-
-      // Map value x in range [a,b] to [c,d]
-      const rangeMap = (x, a, b, c, d) => {
-        if (a === b) return c
-        if (c === d) return c
-        return ((x - a) / (b - a)) * (d - c) + c
-      }
-    </script>
     <script
       type="application/javascript"
       src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"
@@ -55,21 +27,12 @@
 
           <p>lastUpdated: {{ lastUpdated }}</p>
           <p>position: {{ position }}</p>
-          <p>innerHeight: {{ innerHeight }}</p>
-          <p>outerHeight: {{ outerHeight }}</p>
-          <p>innerWidth: {{ innerWidth }}</p>
           <br />
           <p>updateType: {{ updateType }}</p>
-          <br />
+          <p>hasScroll: {{ hasScroll }}</p>
           <p>fullDocumentHeight: {{ fullDocumentHeight }}</p>
           <p>viewPortHeight: {{ viewPortHeight }}</p>
-          <p>fixedViewPortHeight: {{ fixedViewPortHeight }}</p>
-          <p>fixedScrollHeight: {{ fixedScrollHeight }}</p>
           <p>scrollYPosition: {{ round(scrollYPosition) }}</p>
-          <p>
-            scrollY + viewPortHeight: {{ round(scrollYPosition + viewPortHeight)
-            }}
-          </p>
         </div>
 
         <p class="lorem">

@@ -1,12 +1,5 @@
 export type updateType = 'init' | 'scroll' | 'resize' | 'heightChange'
 
-interface Events {
-  onScroll: () => void
-  onResize: () => void
-  onHeightChange: () => void
-  resizeObserver: ResizeObserver
-}
-
 export interface UpdateParams {
   position: number
   updateType: updateType
@@ -15,26 +8,28 @@ export interface UpdateParams {
 }
 
 export interface Options {
-  onInit: (data: UpdateParams) => {}
-  onUpdate: (data: UpdateParams) => {}
+  onInit: (data: UpdateParams) => {} | void
+  onUpdate: (data: UpdateParams) => {} | void
 }
 
-let _getFullDocumentHeight = () => {
-  return Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight
-  )
+interface Events {
+  onScroll?: () => void
+  onResize?: () => void
+  onHeightChange?: () => void
+  resizeObserver?: ResizeObserver
 }
 
-let _getViewPortHeight = () => window.innerHeight || 0
+let _getFullDocumentHeight = () =>
+  Math.max(document.body.scrollHeight, document.documentElement.scrollHeight)
 
-let _getScrollYPosition = () =>
-  window.pageYOffset || document.documentElement.scrollTop || 0
+let _getViewPortHeight = () => window.innerHeight
+
+let _getScrollYPosition = () => window.pageYOffset
+
+let _hasScroll = () => _getFullDocumentHeight() > _getViewPortHeight()
 
 let _clamp = (value: number, min: number, max: number) =>
   Math.min(Math.max(value, min), max)
-
-let _hasScroll = () => _getFullDocumentHeight() > _getViewPortHeight()
 
 let _onUpdate = (updateType: updateType): UpdateParams => {
   let fullDocumentHeight = _getFullDocumentHeight()
@@ -88,8 +83,8 @@ let _init = (
 }
 
 let _destroy = (events: Events) => {
-  window.removeEventListener('scroll', events.onScroll)
-  window.removeEventListener('resize', events.onResize)
+  events.onScroll && window.removeEventListener('scroll', events.onScroll)
+  events.onResize && window.removeEventListener('resize', events.onResize)
   events.resizeObserver && events.resizeObserver.unobserve(document.body)
 }
 
@@ -109,7 +104,7 @@ export const createPositionIndicator = (options: Options) => {
     init: () => _init(options, events),
     destroy: () => {
       _destroy(events)
-      events = null
+      events = {}
     },
   }
 }
