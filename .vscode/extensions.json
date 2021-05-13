@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "christian-kohler.npm-intellisense",
+    "pflannery.vscode-versionlens",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "sibiraj-s.vscode-scss-formatter",
+    "coenraads.bracket-pair-colorizer-2"
+  ]
+}

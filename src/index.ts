@@ -1,3 +1,3 @@
 export const todo = (): void => {
-  console.log('todo');
-};
+  console.log('todo')
+}

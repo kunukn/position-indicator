@@ -24,6 +24,14 @@
     "noUnusedParameters": true,
     "strict": true,
 
+    // Custom
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    
     // Type-checking settings.
     "lib": ["ES2020", "dom"],
     "skipDefaultLibCheck": true,
