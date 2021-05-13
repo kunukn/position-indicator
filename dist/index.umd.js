@@ -19,34 +19,38 @@
   var _clamp = function (value, min, max) {
       return Math.min(Math.max(value, min), max);
   };
-  var _onUpdate = function (updateType) {
+  var _onUpdate = function (updateType, memory) {
       var fullDocumentHeight = _getFullDocumentHeight();
       var viewPortHeight = _getViewPortHeight();
       var scrollYPosition = _getScrollYPosition();
       var relative = fullDocumentHeight - viewPortHeight;
       var position = _clamp(scrollYPosition / (relative || 1), 0, 1);
+      var prevPosition = memory.prevPosition;
+      memory.prevPosition = position;
       return {
           position: position,
+          prevPosition: prevPosition,
+          hasUpdated: position !== prevPosition,
           updateType: updateType,
           hasScroll: _hasScroll(),
           lastUpdated: Date.now(),
       };
   };
-  var _init = function (_a, events) {
+  var _init = function (_a, events, memory) {
       var initCallback = _a.onInit, updateCallback = _a.onUpdate;
       events.onScroll = function () {
           if (updateCallback) {
-              updateCallback(_onUpdate('scroll'));
+              updateCallback(_onUpdate('scroll', memory));
           }
       };
       events.onResize = function () {
           if (updateCallback) {
-              updateCallback(_onUpdate('resize'));
+              updateCallback(_onUpdate('resize', memory));
           }
       };
       events.onHeightChange = function () {
           if (updateCallback) {
-              updateCallback(_onUpdate('heightChange'));
+              updateCallback(_onUpdate('heightChange', memory));
           }
       };
       /**
@@ -60,7 +64,7 @@
           events.resizeObserver = new ResizeObserver(events.onHeightChange);
           events.resizeObserver.observe(document.body);
       }
-      initCallback && initCallback(_onUpdate('init'));
+      initCallback && initCallback(_onUpdate('init', memory));
   };
   var _destroy = function (events) {
       events.onScroll && window.removeEventListener('scroll', events.onScroll);
@@ -74,15 +78,17 @@
           onHeightChange: null,
           resizeObserver: null,
       };
+      var memory = {
+          prevPosition: null,
+      };
       return {
-          hasScroll: function () { return _hasScroll(); },
-          getFullDocumentHeight: function () { return _getFullDocumentHeight(); },
-          getViewPortHeight: function () { return _getViewPortHeight(); },
-          getScrollYPosition: function () { return _getScrollYPosition(); },
-          init: function () { return _init(options, events); },
+          init: function () { return _init(options, events, memory); },
           destroy: function () {
               _destroy(events);
               events = {};
+              memory = {
+                  prevPosition: null,
+              };
           },
       };
   };

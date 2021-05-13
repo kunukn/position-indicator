@@ -1,10 +1,21 @@
 export type updateType = 'init' | 'scroll' | 'resize' | 'heightChange'
 
+export interface Memory {
+  prevPosition: number | null
+}
+
 export interface UpdateParams {
   position: number
+  prevPosition: number
+  hasUpdated: boolean
   updateType: updateType
   hasScroll: boolean
   lastUpdated: number
+}
+
+export interface PositionIndicatorInstance {
+  init: () => void
+  destroy: () => void
 }
 
 export interface Options {
@@ -31,15 +42,19 @@ let _hasScroll = () => _getFullDocumentHeight() > _getViewPortHeight()
 let _clamp = (value: number, min: number, max: number) =>
   Math.min(Math.max(value, min), max)
 
-let _onUpdate = (updateType: updateType): UpdateParams => {
+let _onUpdate = (updateType: updateType, memory: Memory): UpdateParams => {
   let fullDocumentHeight = _getFullDocumentHeight()
   let viewPortHeight = _getViewPortHeight()
   let scrollYPosition = _getScrollYPosition()
 
   let relative = fullDocumentHeight - viewPortHeight
   let position = _clamp(scrollYPosition / (relative || 1), 0, 1)
+  let prevPosition = memory.prevPosition
+  memory.prevPosition = position
   return {
     position,
+    prevPosition,
+    hasUpdated: position !== prevPosition,
     updateType,
     hasScroll: _hasScroll(),
     lastUpdated: Date.now(),
@@ -48,21 +63,22 @@ let _onUpdate = (updateType: updateType): UpdateParams => {
 
 let _init = (
   { onInit: initCallback, onUpdate: updateCallback }: Options,
-  events: Events
+  events: Events,
+  memory: Memory
 ) => {
   events.onScroll = () => {
     if (updateCallback) {
-      updateCallback(_onUpdate('scroll'))
+      updateCallback(_onUpdate('scroll', memory))
     }
   }
   events.onResize = () => {
     if (updateCallback) {
-      updateCallback(_onUpdate('resize'))
+      updateCallback(_onUpdate('resize', memory))
     }
   }
   events.onHeightChange = () => {
     if (updateCallback) {
-      updateCallback(_onUpdate('heightChange'))
+      updateCallback(_onUpdate('heightChange', memory))
     }
   }
 
@@ -79,7 +95,7 @@ let _init = (
     events.resizeObserver.observe(document.body)
   }
 
-  initCallback && initCallback(_onUpdate('init'))
+  initCallback && initCallback(_onUpdate('init', memory))
 }
 
 let _destroy = (events: Events) => {
@@ -88,23 +104,27 @@ let _destroy = (events: Events) => {
   events.resizeObserver && events.resizeObserver.unobserve(document.body)
 }
 
-export const createPositionIndicator = (options: Options) => {
+export const createPositionIndicator = (
+  options: Options
+): PositionIndicatorInstance => {
   let events: Events = {
     onScroll: null,
     onResize: null,
     onHeightChange: null,
     resizeObserver: null,
   }
+  let memory: Memory = {
+    prevPosition: null,
+  }
 
   return {
-    hasScroll: () => _hasScroll(),
-    getFullDocumentHeight: () => _getFullDocumentHeight(),
-    getViewPortHeight: () => _getViewPortHeight(),
-    getScrollYPosition: () => _getScrollYPosition(),
-    init: () => _init(options, events),
+    init: () => _init(options, events, memory),
     destroy: () => {
       _destroy(events)
       events = {}
+      memory = {
+        prevPosition: null,
+      }
     },
   }
 }

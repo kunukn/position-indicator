@@ -30,11 +30,6 @@ new Vue({
       this.updateType = updateType
       this.hasScroll = hasScroll
       this.lastUpdated = lastUpdated
-
-      this.fullDocumentHeight =
-        this.positionIndicatorLibrary.getFullDocumentHeight()
-      this.scrollYPosition = this.positionIndicatorLibrary.getScrollYPosition()
-      this.viewPortHeight = this.positionIndicatorLibrary.getViewPortHeight()
     },
   },
   beforeMount() {
