@@ -40,8 +40,8 @@ It has been tested on
 
 <tr>
 <td>Codesandbox ReactJS</td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
+<td><a href="https://0li7c.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codesandbox.io/s/position-indicator-reactjs-0li7c" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 </table>
