@@ -13,7 +13,7 @@ positionIndicator
 
 ### Type aliases
 
-- [updateEvent](README.md#updateevent)
+- [eventType](README.md#eventType)
 
 ### Functions
 
@@ -21,9 +21,9 @@ positionIndicator
 
 ## Type aliases
 
-### updateEvent
+### eventType
 
-Ƭ **updateEvent**: ``"init"`` \| ``"scroll"`` \| ``"resize"`` \| ``"heightChange"``
+Ƭ **eventType**: ``"init"`` \| ``"scroll"`` \| ``"resize"`` \| ``"heightChange"``
 
 Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L1)
 

@@ -1,4 +1,4 @@
-export type updateEvent = 'init' | 'scroll' | 'resize' | 'heightChange'
+export type eventType = 'init' | 'scroll' | 'resize' | 'heightChange'
 
 export interface Memory {
   prevPosition?: number | null
@@ -8,9 +8,9 @@ export interface UpdateParams {
   position: number
   prevPosition: number
   hasUpdated: boolean
-  updateEvent: updateEvent
+  eventType: eventType
   hasScroll: boolean
-  lastUpdated: number
+  eventDate: number
 }
 
 export interface PositionIndicatorInstance {
@@ -21,7 +21,8 @@ export interface PositionIndicatorInstance {
 export interface Options {
   onInit: (data: UpdateParams) => {} | void
   onUpdate: (data: UpdateParams) => {} | void
-  resizeObserverDisabled: boolean
+  useResizeListener: boolean
+  useResizeObserver: boolean
 }
 
 interface Events {
@@ -43,7 +44,7 @@ let _hasScroll = () => _getFullDocumentHeight() > _getViewPortHeight()
 let _clamp = (value: number, min: number, max: number) =>
   Math.min(Math.max(value, min), max)
 
-let _onUpdate = (updateEvent: updateEvent, memory: Memory): UpdateParams => {
+let _onUpdate = (eventType: eventType, memory: Memory): UpdateParams => {
   let fullDocumentHeight = _getFullDocumentHeight()
   let viewPortHeight = _getViewPortHeight()
   let scrollYPosition = _getScrollYPosition()
@@ -56,9 +57,9 @@ let _onUpdate = (updateEvent: updateEvent, memory: Memory): UpdateParams => {
     position,
     prevPosition,
     hasUpdated: position !== prevPosition,
-    updateEvent,
+    eventType,
     hasScroll: _hasScroll(),
-    lastUpdated: Date.now(),
+    eventDate: Date.now(),
   }
 }
 
@@ -66,7 +67,8 @@ let _init = (
   {
     onInit: initCallback,
     onUpdate: updateCallback,
-    resizeObserverDisabled,
+    useResizeListener = true,
+    useResizeObserver = false,
   }: Options,
   events: Events,
   memory: Memory
@@ -76,13 +78,15 @@ let _init = (
       updateCallback(_onUpdate('scroll', memory))
     }
   }
-  events.onResize = () => {
-    if (updateCallback) {
-      updateCallback(_onUpdate('resize', memory))
+  if (useResizeListener) {
+    events.onResize = () => {
+      if (updateCallback) {
+        updateCallback(_onUpdate('resize', memory))
+      }
     }
   }
 
-  if (!resizeObserverDisabled) {
+  if (useResizeObserver) {
     events.onHeightChange = () => {
       if (updateCallback) {
         updateCallback(_onUpdate('heightChange', memory))

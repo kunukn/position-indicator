@@ -64,10 +64,10 @@ let myOnUpdateCallback = (data) => {}
 let data = {
   position /* value between 0 and 1 */,
   prevPosition /* value between 0 and 1 */,
-  hasUpdated /* if position is different from last event */,
-  updateEvent /* scroll, resize, heightChange or init */,
+  hasUpdated /* if position is different from previous event */,
   hasScroll /* true or false */,
-  lastUpdated /* Date.now() */,
+  eventType /* scroll, resize, heightChange or init */,
+  eventDate /* Date.now() */,
 }
 
 let positionIndicator = createPositionIndicator({

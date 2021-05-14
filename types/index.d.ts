@@ -1,4 +1,4 @@
-export declare type updateEvent = 'init' | 'scroll' | 'resize' | 'heightChange';
+export declare type eventType = 'init' | 'scroll' | 'resize' | 'heightChange';
 export interface Memory {
     prevPosition?: number | null;
 }
@@ -6,9 +6,9 @@ export interface UpdateParams {
     position: number;
     prevPosition: number;
     hasUpdated: boolean;
-    updateEvent: updateEvent;
+    eventType: eventType;
     hasScroll: boolean;
-    lastUpdated: number;
+    eventDate: number;
 }
 export interface PositionIndicatorInstance {
     init: () => void;
@@ -17,7 +17,8 @@ export interface PositionIndicatorInstance {
 export interface Options {
     onInit: (data: UpdateParams) => {} | void;
     onUpdate: (data: UpdateParams) => {} | void;
-    resizeObserverDisabled: boolean;
+    useResizeListener: boolean;
+    useResizeObserver: boolean;
 }
 export declare const createPositionIndicator: (options: Options) => PositionIndicatorInstance;
 //# sourceMappingURL=index.d.ts.map

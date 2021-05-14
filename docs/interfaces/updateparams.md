@@ -8,10 +8,10 @@
 
 - [hasScroll](updateparams.md#hasscroll)
 - [hasUpdated](updateparams.md#hasupdated)
-- [lastUpdated](updateparams.md#lastupdated)
+- [eventDate](updateparams.md#eventDate)
 - [position](updateparams.md#position)
 - [prevPosition](updateparams.md#prevposition)
-- [updateEvent](updateparams.md#updateevent)
+- [eventType](updateparams.md#eventType)
 
 ## Properties
 
@@ -31,9 +31,9 @@ Defined in: [index.ts:10](https://github.com/kunukn/position-indicator/blob/21cd
 
 ___
 
-### lastUpdated
+### eventDate
 
-• **lastUpdated**: *number*
+• **eventDate**: *number*
 
 Defined in: [index.ts:13](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L13)
 
@@ -55,8 +55,8 @@ Defined in: [index.ts:9](https://github.com/kunukn/position-indicator/blob/21cdf
 
 ___
 
-### updateEvent
+### eventType
 
-• **updateEvent**: [*updateEvent*](../README.md#updateevent)
+• **eventType**: [*eventType*](../README.md#eventType)
 
 Defined in: [index.ts:11](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L11)

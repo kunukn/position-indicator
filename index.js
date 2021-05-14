@@ -10,8 +10,8 @@ new Vue({
       viewPortHeight: null,
       scrollYPosition: null,
       hasScroll: null,
-      lastUpdated: null,
-      updateEvent: null,
+      eventDate: null,
+      eventType: null,
       isOpen: true,
       position: 0,
     }
@@ -28,17 +28,19 @@ new Vue({
     onPositionUpdate({
       position,
       prevPosition,
-      updateEvent,
+      eventType,
       hasScroll,
-      lastUpdated,
+      eventDate,
       hasUpdated,
     }) {
+      console.log(eventType, eventDate)
+
       this.position = position
       this.prevPosition = prevPosition
       this.hasUpdated = hasUpdated
-      this.updateEvent = updateEvent
+      this.eventType = eventType
       this.hasScroll = hasScroll
-      this.lastUpdated = lastUpdated
+      this.eventDate = eventDate
     },
   },
   beforeMount() {
@@ -49,7 +51,8 @@ new Vue({
       window.positionIndicator.createPositionIndicator({
         onInit,
         onUpdate,
-        resizeObserverDisabled: false,
+        useResizeListener: true,
+        useResizeObserver: false,
       })
     )
 
