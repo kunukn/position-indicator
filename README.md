@@ -1,4 +1,4 @@
-# position-indicator
+# Position Indicator
 
 [![npm version](https://img.shields.io/npm/v/position-indicator.svg?style=flat-square)](https://www.npmjs.com/package/position-indicator)
 [![npm downloads](https://img.shields.io/npm/dm/position-indicator.svg?style=flat-square)](https://www.npmjs.com/package/position-indicator)
@@ -9,7 +9,7 @@
 ## About
 
 A position indicator that updates on scroll, resize and body height change.<br/>
-Minimal code to know the scroll position of the page.
+Minimal VanillaJS code to know the scroll position of the page.
 
 ## Demo
 
@@ -23,8 +23,8 @@ Minimal code to know the scroll position of the page.
 
 <tr>
 <td>Codesandbox VueJS</td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
+<td><a href="https://88mtz.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codesandbox.io/s/angry-night-88mtz" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 <tr>
