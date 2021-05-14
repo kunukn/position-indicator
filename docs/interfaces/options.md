@@ -8,7 +8,8 @@
 
 - [onInit](options.md#oninit)
 - [onUpdate](options.md#onupdate)
-- [resizeObserverDisabled](options.md#resizeobserverdisabled)
+- [useResizeListener](options.md#useresizelistener)
+- [useResizeObserver](options.md#useresizeobserver)
 
 ## Properties
 
@@ -28,7 +29,7 @@
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L22)
+Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L22)
 
 ___
 
@@ -48,12 +49,20 @@ ___
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L23)
+Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L23)
 
 ___
 
-### resizeObserverDisabled
+### useResizeListener
 
-• **resizeObserverDisabled**: *boolean*
+• **useResizeListener**: *boolean*
 
-Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L24)
+Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L24)
+
+___
+
+### useResizeObserver
+
+• **useResizeObserver**: *boolean*
+
+Defined in: [index.ts:25](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L25)

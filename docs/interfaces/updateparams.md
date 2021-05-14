@@ -6,20 +6,36 @@
 
 ### Properties
 
+- [eventDate](updateparams.md#eventdate)
+- [eventType](updateparams.md#eventtype)
 - [hasScroll](updateparams.md#hasscroll)
 - [hasUpdated](updateparams.md#hasupdated)
-- [eventDate](updateparams.md#eventDate)
 - [position](updateparams.md#position)
 - [prevPosition](updateparams.md#prevposition)
-- [eventType](updateparams.md#eventType)
 
 ## Properties
+
+### eventDate
+
+• **eventDate**: *number*
+
+Defined in: [index.ts:13](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L13)
+
+___
+
+### eventType
+
+• **eventType**: [*eventType*](../README.md#eventtype)
+
+Defined in: [index.ts:11](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L11)
+
+___
 
 ### hasScroll
 
 • **hasScroll**: *boolean*
 
-Defined in: [index.ts:12](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L12)
+Defined in: [index.ts:12](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L12)
 
 ___
 
@@ -27,15 +43,7 @@ ___
 
 • **hasUpdated**: *boolean*
 
-Defined in: [index.ts:10](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L10)
-
-___
-
-### eventDate
-
-• **eventDate**: *number*
-
-Defined in: [index.ts:13](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L13)
+Defined in: [index.ts:10](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L10)
 
 ___
 
@@ -43,7 +51,7 @@ ___
 
 • **position**: *number*
 
-Defined in: [index.ts:8](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L8)
+Defined in: [index.ts:8](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L8)
 
 ___
 
@@ -51,12 +59,4 @@ ___
 
 • **prevPosition**: *number*
 
-Defined in: [index.ts:9](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L9)
-
-___
-
-### eventType
-
-• **eventType**: [*eventType*](../README.md#eventType)
-
-Defined in: [index.ts:11](https://github.com/kunukn/position-indicator/blob/21cdf24/src/index.ts#L11)
+Defined in: [index.ts:9](https://github.com/kunukn/position-indicator/blob/338dfc8/src/index.ts#L9)
