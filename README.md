@@ -8,8 +8,19 @@
 
 ## About
 
-A position indicator that updates on scroll, resize and body height change.<br/>
-Minimal VanillaJS code to know the scroll position of the page.
+Minimal VanillaJS code to know the scroll position of the page.<br/>
+
+A position indicator that updates on:
+
+- scroll
+- resize
+- body height change.<br/>
+
+It has been tested on
+
+- Phones (iOS, Android)
+- Tablets (iPadOS, Android)
+- Laptops (Mac, Windows)
 
 ## Demo
 
