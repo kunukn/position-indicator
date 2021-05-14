@@ -51,8 +51,8 @@ new Vue({
       window.positionIndicator.createPositionIndicator({
         onInit,
         onUpdate,
-        useResizeListener: true,
-        useResizeObserver: false,
+        // useResizeListener: true,
+        // useResizeObserver: true,
       })
     )
 

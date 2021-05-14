@@ -68,7 +68,7 @@ let _init = (
     onInit: initCallback,
     onUpdate: updateCallback,
     useResizeListener = true,
-    useResizeObserver = false,
+    useResizeObserver = true,
   }: Options,
   events: Events,
   memory: Memory

@@ -1,5 +1,5 @@
 /*!
- * position-indicator v0.0.3
+ * position-indicator v0.0.4
  * (c) kunukn
  * Released under the MIT License.
  */
@@ -35,7 +35,7 @@ var _onUpdate = function (eventType, memory) {
     };
 };
 var _init = function (_a, events, memory) {
-    var initCallback = _a.onInit, updateCallback = _a.onUpdate, _b = _a.useResizeListener, useResizeListener = _b === void 0 ? true : _b, _c = _a.useResizeObserver, useResizeObserver = _c === void 0 ? false : _c;
+    var initCallback = _a.onInit, updateCallback = _a.onUpdate, _b = _a.useResizeListener, useResizeListener = _b === void 0 ? true : _b, _c = _a.useResizeObserver, useResizeObserver = _c === void 0 ? true : _c;
     events.onScroll = function () {
         if (updateCallback) {
             updateCallback(_onUpdate('scroll', memory));
