@@ -16,25 +16,19 @@ Minimal code to know the scroll position of the page.
 <table style="border-spacing: 16px;border-collapse: separate;">
 
 <tr>
-<td>Codepen VanillaJS</td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">TODO View</a></td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">TODO Edit</a></td>
+<td>Codepen VueJS</td>
+<td><a href="https://codepen.io/kunukn/full/wvJGzda" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codepen.io/kunukn/pen/wvJGzda" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 <tr>
-<td>Codesandbox VanillaJS</td>
+<td>Codesandbox VueJS</td>
 <td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
 <td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
 </tr>
 
 <tr>
 <td>Codesandbox ReactJS</td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
-<td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
-</tr>
-
-<tr>
-<td>Codesandbox VueJS</td>
 <td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
 <td><a href="#" target="_blank" rel="noopener noreferrer">TODO</a></td>
 </tr>

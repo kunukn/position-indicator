@@ -121,7 +121,7 @@
           <p>
             eventType: {{ eventType }}<br />
             prevEventType: {{ prevEventType }}<br />
-            eventDate: {{ eventDate }}<br />
+            eventDate: {{ (new Date(eventDate)).toLocaleString() }}<br />
           </p>
         </div>
       </div>
