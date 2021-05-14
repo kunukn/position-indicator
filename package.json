@@ -1,6 +1,6 @@
 {
   "name": "position-indicator",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "position indicator library",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",

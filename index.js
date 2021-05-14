@@ -33,10 +33,11 @@ new Vue({
       eventDate,
       hasUpdated,
     }) {
-      console.log(eventType, eventDate)
+      if (hasUpdated) {
+        this.position = position
+        this.prevPosition = prevPosition
+      }
 
-      this.position = position
-      this.prevPosition = prevPosition
       this.hasUpdated = hasUpdated
       this.prevEventType = this.eventType + ''
       this.eventType = eventType
