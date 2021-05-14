@@ -6,9 +6,11 @@
     <title>Demo</title>
 
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
     <link rel="stylesheet" href="/index.css" />
-
-    <style></style>
   </head>
   <body>
     <script
@@ -18,41 +20,109 @@
     <script type="application/javascript" src="/dist/index.umd.min.js"></script>
 
     <div class="app" id="app">
-      <div class="device">
-        <div class="info">
-          <h3>Device Scroll Position and Height</h3>
-          <button class="toggle" @click="isOpen = !isOpen">
-            Toggle {{ isOpen }}
-          </button>
-
-          <p>eventDate: {{ eventDate }}</p>
-          <p>position: {{ position }}</p>
-          <p>prevPosition: {{ prevPosition }}</p>
-          <p>hasUpdated: {{ hasUpdated }}</p>
-          <br />
-          <p>eventType: {{ eventType }}</p>
-          <p>hasScroll: {{ hasScroll }}</p>
-        </div>
-
-        <p class="lorem">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+      <article>
+        <h1>Position indicator</h1>
+        <h2>scroll down</h2>
+        <p>
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought.
         </p>
+        <button @click="toggle1 = !toggle1" class="toggle area-one">
+          Toggle {{toggle1}}
+        </button>
+        <p v-if="toggle1" class="area-one">
+          It wasn't a dream. His room, a proper human room although a little too
+          small, lay peacefully between its four familiar walls. A collection of
+          textile samples lay spread out on the table - Samsa was a travelling
+          salesman - and above it there hung a picture that he had recently cut
+          out of an illustrated magazine and housed in a nice, gilded frame. It
+          showed a lady fitted out with a fur hat and fur boa who sat upright,
+          raising a heavy fur muff that covered the whole of her lower arm
+          towards the viewer.
+        </p>
+        <button @click="toggle2 = !toggle2" class="toggle area-two">
+          Toggle {{toggle2}}
+        </button>
+        <p v-if="toggle2" class="area-two">
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought.
+        </p>
+        <p>
+          It wasn't a dream. His room, a proper human room although a little too
+          small, lay peacefully between its four familiar walls. A collection of
+          textile samples lay spread out on the table - Samsa was a travelling
+          salesman - and above it there hung a picture that he had recently cut
+          out of an illustrated magazine and housed in a nice, gilded frame. It
+          showed a lady fitted out with a fur hat and fur boa who sat upright,
+          raising a heavy fur muff that covered the whole of her lower arm
+          towards the viewer.
+        </p>
+        <p>
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought.
+        </p>
+        <p>
+          It wasn't a dream. His room, a proper human room although a little too
+          small, lay peacefully between its four familiar walls. A collection of
+          textile samples lay spread out on the table - Samsa was a travelling
+          salesman - and above it there hung a picture that he had recently cut
+          out of an illustrated magazine and housed in a nice, gilded frame. It
+          showed a lady fitted out with a fur hat and fur boa who sat upright,
+          raising a heavy fur muff that covered the whole of her lower arm
+          towards the viewer.
+        </p>
+        <p>
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought.
+        </p>
+        <p>
+          It wasn't a dream. His room, a proper human room although a little too
+          small, lay peacefully between its four familiar walls. A collection of
+          textile samples lay spread out on the table - Samsa was a travelling
+          salesman - and above it there hung a picture that he had recently cut
+          out of an illustrated magazine and housed in a nice, gilded frame. It
+          showed a lady fitted out with a fur hat and fur boa who sat upright,
+          raising a heavy fur muff that covered the whole of her lower arm
+          towards the viewer.
+        </p>
+      </article>
 
-        <div v-if="isOpen" class="box">Collapse box</div>
-
-        <div class="indicator">
-          <div
-            class="indicator-width"
-            :style="{ transform: calculatedLineWidth }"
-          ></div>
+      <div class="indicator">
+        <div
+          class="indicator-width"
+          :style="{ transform: calculatedLineWidth }"
+        ></div>
+        <div class="indicator-position">{{ position }}</div>
+        <div class="indicator-info">
+          <p>
+            eventType: {{ eventType }}<br />
+            prevEventType: {{ prevEventType }}<br />
+            eventDate: {{ eventDate }}<br />
+          </p>
         </div>
       </div>
     </div>

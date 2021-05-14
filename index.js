@@ -4,16 +4,16 @@ new Vue({
   el: '#app',
   data() {
     return {
+      toggle1: true,
+      toggle2: true,
       positionIndicatorLibrary: null,
 
-      fullDocumentHeight: null,
-      viewPortHeight: null,
-      scrollYPosition: null,
       hasScroll: null,
       eventDate: null,
       eventType: null,
-      isOpen: true,
+      prevEventType: null,
       position: 0,
+      prevPosition: 0,
     }
   },
   computed: {
@@ -38,6 +38,7 @@ new Vue({
       this.position = position
       this.prevPosition = prevPosition
       this.hasUpdated = hasUpdated
+      this.prevEventType = this.eventType + ''
       this.eventType = eventType
       this.hasScroll = hasScroll
       this.eventDate = eventDate

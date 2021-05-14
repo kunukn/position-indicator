@@ -8,47 +8,44 @@ html {
 }
 body {
   min-height: 100vh;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: lightyellow;
-}
-
-.device {
-  color: #333;
-}
-.info {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  background: white;
-  border: 1px solid;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
   padding: 1rem;
 }
-p {
-  line-height: 1.5;
+
+h1,
+h2 {
+  margin-bottom: 2rem;
 }
 
-.lorem {
-  padding: 1rem;
-  line-height: 20;
-  max-width: 900px;
-  background: orange;
-  min-height: 99vh;
+article {
+  box-sizing: border-box;
+  font-size: 16px;
+  display: block;
+  transition: 200ms;
+  max-width: 96%;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+article p {
+  line-height: 2;
+  margin-bottom: 2em;
+}
+@media (min-width: 900px) {
+  article {
+    max-width: 70%;
+  }
+}
+@media (min-width: 1600px) {
+  article {
+    max-width: 60%;
+  }
 }
 
 .toggle {
-  border: 1px solid;
+  border-radius: 8px;
   padding: 1rem;
   width: 100%;
-}
-
-.box {
-  min-height: 300px;
-  background: pink;
 }
 
 .indicator {
@@ -67,4 +64,37 @@ p {
   width: 100%;
   transform-origin: 0 0;
   will-change: transform;
+}
+
+.indicator-position {
+  position: fixed;
+  top: 1rem;
+  right: 8px;
+  border-radius: 4px;
+  color: white;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px;
+}
+
+.indicator-info {
+  position: fixed;
+  top: 3rem;
+  right: 8px;
+  border-radius: 4px;
+  color: white;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px;
+}
+
+.area-one {
+  background: pink;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.area-two {
+  background: burlywood;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
