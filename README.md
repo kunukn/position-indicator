@@ -27,21 +27,21 @@ It has been tested on
 <table style="border-spacing: 16px;border-collapse: separate;">
 
 <tr>
-<td>Codepen VueJS</td>
-<td><a href="https://codepen.io/kunukn/full/wvJGzda" target="_blank" rel="noopener noreferrer">View</a></td>
-<td><a href="https://codepen.io/kunukn/pen/wvJGzda" target="_blank" rel="noopener noreferrer">Edit</a></td>
+<td>Codesandbox React</td>
+<td><a href="https://0li7c.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codesandbox.io/s/position-indicator-reactjs-0li7c" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 <tr>
-<td>Codesandbox VueJS</td>
+<td>Codesandbox Vue</td>
 <td><a href="https://88mtz.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
 <td><a href="https://codesandbox.io/s/angry-night-88mtz" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 <tr>
-<td>Codesandbox ReactJS</td>
-<td><a href="https://0li7c.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
-<td><a href="https://codesandbox.io/s/position-indicator-reactjs-0li7c" target="_blank" rel="noopener noreferrer">Edit</a></td>
+<td>Codepen Vue</td>
+<td><a href="https://codepen.io/kunukn/full/wvJGzda" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codepen.io/kunukn/pen/wvJGzda" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 </table>
