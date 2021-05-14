@@ -73,6 +73,8 @@ let data = {
 let positionIndicator = createPositionIndicator({
   onInit: myOnInitCallback,
   onUpdate: myOnUpdateCallback,
+  useResizeListener: true, // optional: default true
+  useResizeObserver: true, // optional: default true
 })
 
 positionIndicator.init()
