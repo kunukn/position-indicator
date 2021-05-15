@@ -27,9 +27,9 @@ It updates when the devices rotates and if the height changes on interaction.
 
 ## Browser Support
 
-| ![Chrome](https://cloud.githubusercontent.com/assets/398893/3528328/23bc7bc4-078e-11e4-8752-ba2809bf5cce.png) | ![Safari](https://cloud.githubusercontent.com/assets/398893/3528331/29df8618-078e-11e4-8e3e-ed8ac738693f.png) | ![Firefox](https://cloud.githubusercontent.com/assets/398893/3528329/26283ab0-078e-11e4-84d4-db2cf1009953.png) |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Latest ✔                                                                                                      | Latest ✔                                                                                                      | Latest ✔                                                                                                       |
+| ![Chrome](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.0.0/chrome/chrome_48x48.png) | ![Safari](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.0.0/safari-ios/safari-ios_48x48.png) | ![Firefox](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.0.0/firefox/firefox_48x48.png) |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| Latest ✔                                                                                       | Latest ✔                                                                                               | Latest ✔                                                                                          |
 
 ## Demo
 
