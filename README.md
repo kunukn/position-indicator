@@ -29,7 +29,7 @@ It updates when the devices rotates and if the height changes on interaction.
 
 | ![Chrome](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.0.0/chrome/chrome_48x48.png) | ![Safari](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.0.0/safari-ios/safari-ios_48x48.png) | ![Firefox](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.0.0/firefox/firefox_48x48.png) |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| Latest ✔                                                                                       | Latest ✔                                                                                               | Latest ✔                                                                                          |
+| 60+                                                                                            | 12+                                                                                                    | 60+                                                                                               |
 
 ## Demo
 
