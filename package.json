@@ -20,8 +20,7 @@
     ]
   },
   "scripts": {
-    "dev1": "browser-sync . -w --port 3055",
-    "dev": "vite --port 3077",
+    "dev": "vite --port 3055",
     "serve": "vite preview",
     "doc": "typedoc src/index.ts",
     "test": "npm run test:lint && npm run test:unit",
