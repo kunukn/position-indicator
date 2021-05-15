@@ -1,5 +1,5 @@
 /*!
- * position-indicator v0.0.6
+ * position-indicator v0.0.7
  * (c) kunukn
  * Released under the MIT License.
  */
