@@ -12,7 +12,7 @@
       about helplessly as he looked. "What's happened to me?" he thought.
     </p>
     <button @click="toggle1 = !toggle1" class="toggle area-one">
-      Toggle {{ toggle1 }}
+      Toggle {{ toggle1 ? 'expanded' : 'collapsed' }}
     </button>
     <p v-if="toggle1" class="area-one">
       It wasn't a dream. His room, a proper human room although a little too
@@ -24,7 +24,7 @@
       heavy fur muff that covered the whole of her lower arm towards the viewer.
     </p>
     <button @click="toggle2 = !toggle2" class="toggle area-two">
-      Toggle {{ toggle2 }}
+      Toggle {{ toggle2 ? 'expanded' : 'collapsed' }}
     </button>
     <p v-if="toggle2" class="area-two">
       One morning, when Gregor Samsa woke from troubled dreams, he found himself
@@ -170,22 +170,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-html {
-  font-size: 16px;
-}
-body {
-  min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-  position: relative;
-  padding: 1rem;
-}
-
+<style scoped lang="scss">
 h1,
 h2 {
   margin-bottom: 2rem;
@@ -200,25 +185,30 @@ article {
   margin: 0 auto;
   padding: 0 2em;
 }
-article p {
-  line-height: 2;
-  margin-bottom: 2em;
-}
-@media (min-width: 900px) {
-  article {
+article {
+  p {
+    line-height: 2;
+    margin-bottom: 2em;
+  }
+  @media (min-width: 900px) {
     max-width: 70%;
   }
-}
-@media (min-width: 1600px) {
-  article {
+  @media (min-width: 1600px) {
     max-width: 60%;
   }
 }
 
 .toggle {
-  border-radius: 8px;
+  border-radius: 2rem;
   padding: 1rem;
   width: 100%;
+  box-shadow: inset 0 0 0 1px black;
+  &.area-one {
+    box-shadow: inset 0 0 0 1px orange;
+  }
+  &.area-two {
+    box-shadow: inset 0 0 0 1px hotpink;
+  }
 }
 
 .indicator {
