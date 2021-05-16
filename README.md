@@ -58,7 +58,7 @@ It updates when the devices rotates and if the height changes on interaction.
 
 <tr>
 <td>Codepen Vue</td>
-<td></td>
+<td><img width="24" height="24" src="ui-library-logo/Vue-logo.svg"/></td>
 <td><a href="https://codepen.io/kunukn/full/wvJGzda" target="_blank" rel="noopener noreferrer">View</a></td>
 <td><a href="https://codepen.io/kunukn/pen/wvJGzda" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
