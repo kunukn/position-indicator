@@ -22,6 +22,7 @@ It has been tested on
 - Phones (iOS, Android)
 - Tablets (iPadOS, Android)
 - Laptops (Mac, Windows)
+- Modern browsers
 
 It updates when the devices rotates and if the height changes on interaction.
 
