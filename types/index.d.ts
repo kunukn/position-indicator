@@ -15,10 +15,10 @@ export interface PositionIndicatorInstance {
     destroy: () => void;
 }
 export interface Options {
-    onInit: (data: UpdateParams) => {} | void;
+    onInit?: (data: UpdateParams) => {} | void;
     onUpdate: (data: UpdateParams) => {} | void;
-    useResizeListener: boolean;
-    useResizeObserver: boolean;
+    useResizeListener?: boolean;
+    useResizeObserver?: boolean;
 }
 export declare const createPositionIndicator: (options: Options) => PositionIndicatorInstance;
 //# sourceMappingURL=index.d.ts.map

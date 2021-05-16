@@ -19,10 +19,10 @@ export interface PositionIndicatorInstance {
 }
 
 export interface Options {
-  onInit: (data: UpdateParams) => {} | void
+  onInit?: (data: UpdateParams) => {} | void
   onUpdate: (data: UpdateParams) => {} | void
-  useResizeListener: boolean
-  useResizeObserver: boolean
+  useResizeListener?: boolean
+  useResizeObserver?: boolean
 }
 
 interface Events {

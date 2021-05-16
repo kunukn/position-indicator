@@ -15,7 +15,7 @@
 
 ### onInit
 
-• **onInit**: (`data`: [*UpdateParams*](updateparams.md)) => *void* \| {}
+• `Optional` **onInit**: (`data`: [*UpdateParams*](updateparams.md)) => *void* \| {}
 
 #### Type declaration
 
@@ -29,7 +29,7 @@
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/76e7ac0/src/index.ts#L22)
+Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/fa46c2c/src/index.ts#L22)
 
 ___
 
@@ -49,20 +49,20 @@ ___
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/76e7ac0/src/index.ts#L23)
+Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/fa46c2c/src/index.ts#L23)
 
 ___
 
 ### useResizeListener
 
-• **useResizeListener**: *boolean*
+• `Optional` **useResizeListener**: *boolean*
 
-Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/76e7ac0/src/index.ts#L24)
+Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/fa46c2c/src/index.ts#L24)
 
 ___
 
 ### useResizeObserver
 
-• **useResizeObserver**: *boolean*
+• `Optional` **useResizeObserver**: *boolean*
 
-Defined in: [index.ts:25](https://github.com/kunukn/position-indicator/blob/76e7ac0/src/index.ts#L25)
+Defined in: [index.ts:25](https://github.com/kunukn/position-indicator/blob/fa46c2c/src/index.ts#L25)
