@@ -115,6 +115,7 @@ export default defineComponent({
       prevEventType: null,
       position: 0,
       prevPosition: 0,
+      hasUpdated: false,
     }
   },
   computed: {
