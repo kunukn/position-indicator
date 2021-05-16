@@ -48,6 +48,12 @@ It updates when the devices rotates and if the height changes on interaction.
 </tr>
 
 <tr>
+<td>Codesandbox Angular</td>
+<td><a href="https://jgm6g.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
+<td><a href="https://codesandbox.io/s/position-indicator-angular-jgm6g" target="_blank" rel="noopener noreferrer">Edit</a></td>
+</tr>
+
+<tr>
 <td>Codepen Vue</td>
 <td><a href="https://codepen.io/kunukn/full/wvJGzda" target="_blank" rel="noopener noreferrer">View</a></td>
 <td><a href="https://codepen.io/kunukn/pen/wvJGzda" target="_blank" rel="noopener noreferrer">Edit</a></td>
