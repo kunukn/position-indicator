@@ -71,7 +71,7 @@ let _init = (
     useResizeObserver = true,
   }: Options,
   events: Events,
-  memory: Memory
+  memory: Memory,
 ) => {
   events.onScroll = () => {
     if (updateCallback) {
@@ -117,7 +117,7 @@ let _destroy = (events: Events) => {
 }
 
 export const createPositionIndicator = (
-  options: Options
+  options: Options,
 ): PositionIndicatorInstance => {
   let events: Events = {
     onScroll: null,

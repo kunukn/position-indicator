@@ -10,6 +10,9 @@ const options = {
   quoteProps: 'consistent',
   singleQuote: true,
   trailingComma: 'all',
-};
+  semi: false,
+  endOfLine: 'auto',
+  tabWidth: 2,
+}
 
-module.exports = options;
+module.exports = options
