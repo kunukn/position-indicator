@@ -29,7 +29,7 @@
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/451d124/src/index.ts#L22)
+Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/c5ffe6d/src/index.ts#L22)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/451d124/src/index.ts#L23)
+Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/c5ffe6d/src/index.ts#L23)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • `Optional` **useResizeListener**: *boolean*
 
-Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/451d124/src/index.ts#L24)
+Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/c5ffe6d/src/index.ts#L24)
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 • `Optional` **useResizeObserver**: *boolean*
 
-Defined in: [index.ts:25](https://github.com/kunukn/position-indicator/blob/451d124/src/index.ts#L25)
+Defined in: [index.ts:25](https://github.com/kunukn/position-indicator/blob/c5ffe6d/src/index.ts#L25)

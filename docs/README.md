@@ -25,7 +25,7 @@ positionIndicator
 
 Ƭ **eventType**: ``"init"`` \| ``"scroll"`` \| ``"resize"`` \| ``"heightChange"``
 
-Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/451d124/src/index.ts#L1)
+Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/c5ffe6d/src/index.ts#L1)
 
 ## Functions
 
@@ -41,4 +41,4 @@ Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/451d1
 
 **Returns:** [*PositionIndicatorInstance*](interfaces/positionindicatorinstance.md)
 
-Defined in: [index.ts:119](https://github.com/kunukn/position-indicator/blob/451d124/src/index.ts#L119)
+Defined in: [index.ts:119](https://github.com/kunukn/position-indicator/blob/c5ffe6d/src/index.ts#L119)
