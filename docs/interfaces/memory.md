@@ -14,4 +14,4 @@
 
 • `Optional` **prevPosition**: *number*
 
-Defined in: [index.ts:4](https://github.com/kunukn/position-indicator/blob/fa46c2c/src/index.ts#L4)
+Defined in: [index.ts:4](https://github.com/kunukn/position-indicator/blob/451d124/src/index.ts#L4)
