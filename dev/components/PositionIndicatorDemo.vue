@@ -228,6 +228,7 @@ article {
   width: 100%;
   transform-origin: 0 0;
   will-change: transform;
+  transform: scaleX(0);
 }
 
 .indicator-position {
