@@ -37,28 +37,28 @@ It updates when the devices rotates and if the height changes on interaction.
 
 <tr>
 <td>Codesandbox React</td>
-<td><img src="ui-library-logo/React-logo.svg"/></td>
+<td><img width="24" height="24" src="ui-library-logo/React-logo.svg"/></td>
 <td><a href="https://0li7c.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
 <td><a href="https://codesandbox.io/s/position-indicator-reactjs-0li7c" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 <tr>
 <td>Codesandbox Vue</td>
-<td><img src="ui-library-logo/Vue-logo.svg"/></td>
+<td><img width="24" height="24" src="ui-library-logo/Vue-logo.svg"/></td>
 <td><a href="https://88mtz.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
 <td><a href="https://codesandbox.io/s/angry-night-88mtz" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 <tr>
 <td>Codesandbox Angular</td>
-<td><img src="ui-library-logo/Angular-logo.svg"/></td>
+<td><img width="24" height="24" src="ui-library-logo/Angular-logo.svg"/></td>
 <td><a href="https://jgm6g.csb.app/" target="_blank" rel="noopener noreferrer">View</a></td>
 <td><a href="https://codesandbox.io/s/position-indicator-angular-jgm6g" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
 
 <tr>
 <td>Codepen Vue</td>
-<td><img src="ui-library-logo/Vue-logo.svg"/></td>
+<td></td>
 <td><a href="https://codepen.io/kunukn/full/wvJGzda" target="_blank" rel="noopener noreferrer">View</a></td>
 <td><a href="https://codepen.io/kunukn/pen/wvJGzda" target="_blank" rel="noopener noreferrer">Edit</a></td>
 </tr>
