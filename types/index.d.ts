@@ -2,7 +2,7 @@ export declare type eventType = 'init' | 'scroll' | 'resize' | 'heightChange';
 export interface Memory {
     prevPosition?: number | null;
 }
-export interface UpdateParams {
+export interface CallbackParams {
     position: number;
     prevPosition: number;
     hasUpdated: boolean;
@@ -15,8 +15,8 @@ export interface PositionIndicatorInstance {
     destroy: () => void;
 }
 export interface Options {
-    onInit?: (data: UpdateParams) => {} | void;
-    onUpdate: (data: UpdateParams) => {} | void;
+    onInit?: (data: CallbackParams) => {} | void;
+    onUpdate: (data: CallbackParams) => {} | void;
     useResizeListener?: boolean;
     useResizeObserver?: boolean;
 }

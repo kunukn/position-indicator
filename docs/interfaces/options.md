@@ -15,41 +15,41 @@
 
 ### onInit
 
-• `Optional` **onInit**: (`data`: [*UpdateParams*](updateparams.md)) => *void* \| {}
+• `Optional` **onInit**: (`data`: [*CallbackParams*](callbackparams.md)) => *void* \| {}
 
 #### Type declaration
 
-▸ (`data`: [*UpdateParams*](updateparams.md)): *void* \| {}
+▸ (`data`: [*CallbackParams*](callbackparams.md)): *void* \| {}
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data` | [*UpdateParams*](updateparams.md) |
+| `data` | [*CallbackParams*](callbackparams.md) |
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/1e1be96/src/index.ts#L22)
+Defined in: [index.ts:22](https://github.com/kunukn/position-indicator/blob/985b917/src/index.ts#L22)
 
 ___
 
 ### onUpdate
 
-• **onUpdate**: (`data`: [*UpdateParams*](updateparams.md)) => *void* \| {}
+• **onUpdate**: (`data`: [*CallbackParams*](callbackparams.md)) => *void* \| {}
 
 #### Type declaration
 
-▸ (`data`: [*UpdateParams*](updateparams.md)): *void* \| {}
+▸ (`data`: [*CallbackParams*](callbackparams.md)): *void* \| {}
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `data` | [*UpdateParams*](updateparams.md) |
+| `data` | [*CallbackParams*](callbackparams.md) |
 
 **Returns:** *void* \| {}
 
-Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/1e1be96/src/index.ts#L23)
+Defined in: [index.ts:23](https://github.com/kunukn/position-indicator/blob/985b917/src/index.ts#L23)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • `Optional` **useResizeListener**: *boolean*
 
-Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/1e1be96/src/index.ts#L24)
+Defined in: [index.ts:24](https://github.com/kunukn/position-indicator/blob/985b917/src/index.ts#L24)
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 • `Optional` **useResizeObserver**: *boolean*
 
-Defined in: [index.ts:25](https://github.com/kunukn/position-indicator/blob/1e1be96/src/index.ts#L25)
+Defined in: [index.ts:25](https://github.com/kunukn/position-indicator/blob/985b917/src/index.ts#L25)

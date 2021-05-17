@@ -4,7 +4,7 @@ export interface Memory {
   prevPosition?: number | null
 }
 
-export interface UpdateParams {
+export interface CallbackParams {
   position: number
   prevPosition: number
   hasUpdated: boolean
@@ -19,8 +19,8 @@ export interface PositionIndicatorInstance {
 }
 
 export interface Options {
-  onInit?: (data: UpdateParams) => {} | void
-  onUpdate: (data: UpdateParams) => {} | void
+  onInit?: (data: CallbackParams) => {} | void
+  onUpdate: (data: CallbackParams) => {} | void
   useResizeListener?: boolean
   useResizeObserver?: boolean
 }
@@ -44,7 +44,7 @@ let _hasScroll = () => _getFullDocumentHeight() > _getViewPortHeight()
 let _clamp = (value: number, min: number, max: number) =>
   Math.min(Math.max(value, min), max)
 
-let _onUpdate = (eventType: eventType, memory: Memory): UpdateParams => {
+let _onUpdate = (eventType: eventType, memory: Memory): CallbackParams => {
   let fullDocumentHeight = _getFullDocumentHeight()
   let viewPortHeight = _getViewPortHeight()
   let scrollYPosition = _getScrollYPosition()

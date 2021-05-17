@@ -6,10 +6,10 @@ positionIndicator
 
 ### Interfaces
 
+- [CallbackParams](interfaces/callbackparams.md)
 - [Memory](interfaces/memory.md)
 - [Options](interfaces/options.md)
 - [PositionIndicatorInstance](interfaces/positionindicatorinstance.md)
-- [UpdateParams](interfaces/updateparams.md)
 
 ### Type aliases
 
@@ -25,7 +25,7 @@ positionIndicator
 
 Ƭ **eventType**: ``"init"`` \| ``"scroll"`` \| ``"resize"`` \| ``"heightChange"``
 
-Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/1e1be96/src/index.ts#L1)
+Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/985b917/src/index.ts#L1)
 
 ## Functions
 
@@ -41,4 +41,4 @@ Defined in: [index.ts:1](https://github.com/kunukn/position-indicator/blob/1e1be
 
 **Returns:** [*PositionIndicatorInstance*](interfaces/positionindicatorinstance.md)
 
-Defined in: [index.ts:119](https://github.com/kunukn/position-indicator/blob/1e1be96/src/index.ts#L119)
+Defined in: [index.ts:119](https://github.com/kunukn/position-indicator/blob/985b917/src/index.ts#L119)
