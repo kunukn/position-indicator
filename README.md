@@ -15,7 +15,7 @@ A position indicator that updates on:
 
 - scroll
 - resize
-- body height change.<br/>
+- body height change<br/>
 
 It has been tested on
 
